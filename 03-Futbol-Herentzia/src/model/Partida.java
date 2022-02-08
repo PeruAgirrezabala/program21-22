@@ -49,5 +49,8 @@ public class Partida {
     public void setTxartelak(ArrayList<Futbolista> txartelak) {
         this.txartelak = txartelak;
     }
+    public void txartelaJarri(Futbolista f){
+        txartelak.add(f);
+    }
     
 }

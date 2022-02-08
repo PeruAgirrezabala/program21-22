@@ -5,16 +5,34 @@
  */
 package model;
 
+import enumak.Demarkazioa;
+
 /**
  *
  * @author agirrezabala.peru
  */
 public class IntegranteSeleccion {
 
+    public static void add(int i, String aitor, String fernandez, int i0, int i1, Demarkazioa demarkazioa) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public static void add(int i, String javier, String clemente, int i0, String rfef) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public static void add(int i, String iñaki, String sertxiberrieta, int i0, String fisioterapia, int i1) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     protected int id;
     protected String nombre;
     private String apellidos;
     private int edad;
+    
+    public IntegranteSeleccion(){
+        
+    }
 
     public IntegranteSeleccion(int id, String nombre, String apellidos, int edad) {
         this.id = id;

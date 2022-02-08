@@ -20,6 +20,9 @@ public class Masajista extends IntegranteSeleccion {
         this.añosExperiencia = añosExperiencia;
     }
 
+    public Masajista() {
+    }
+
     public String getTitulacion() {
         return titulacion;
     }
