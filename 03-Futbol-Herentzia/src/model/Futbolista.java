@@ -15,8 +15,6 @@ public class Futbolista extends IntegranteSeleccion {
 
     private int dorsal;
     private Demarkazioa demarcacion;
-    
-    
 
     public Futbolista(int id, String nombre, String apellidos, int edad, int dorsal, Demarkazioa demarcacion) {
         super(id, nombre, apellidos, edad);
@@ -49,4 +47,8 @@ public class Futbolista extends IntegranteSeleccion {
         return "jugar partido";
     }
 
+    @Override
+    public String toString() {
+        return "[id=" + id + ", nombre=" + nombre+", apellidos="+this.getApellidos() + ", edad=" + this.getEdad() + ", dorsal=" + dorsal + ", demarkazioa=" + demarcacion + ")";
+    }
 }

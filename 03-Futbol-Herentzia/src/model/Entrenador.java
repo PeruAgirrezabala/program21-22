@@ -18,6 +18,10 @@ public class Entrenador extends IntegranteSeleccion {
         this.idFederacion = idFederacion;
     }
 
+    public Entrenador() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
    
 
     public String getIdFederacion() {
