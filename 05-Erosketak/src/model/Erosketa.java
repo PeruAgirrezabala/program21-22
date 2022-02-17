@@ -40,5 +40,10 @@ public class Erosketa {
         public String toStringLuzea(){
             return "Erosketa" + "Kodea=" + String.valueOf(kodea) + "\nData=" + data + "\n Bezeroa=" + bezeroa + "\n Produktuak=" + produktuak + "\n Unitateak=" + unitateak + "\n Guztira=" + guztira ;
         }
+        public boolean guztiraEgiaztatu(){
+            int kalkuluaGuztira=0;
+            
+            
+        }
         
 }

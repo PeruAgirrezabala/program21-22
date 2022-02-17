@@ -17,6 +17,9 @@ import model.Produktua;
  * @author agirrezabala.peru
  */
 public class ObjetuBanaSortu {
+    public static void main(String[] args) {
+        
+   
             Bezeroa karlos = new Pertsona(1,"Karlos","Argiñano","Hondartza Pasialekua z/g ZARAUTZ","kargi@uni.eus");
         System.out.println("karlos => " + karlos);
         
@@ -38,5 +41,5 @@ public class ObjetuBanaSortu {
             System.out.println("Datu zuzenak.");
         else
             System.out.println("'guztira' atributua ez dator bat produktuen zerrendak dioenarekin.");
-    
+    } 
 }
