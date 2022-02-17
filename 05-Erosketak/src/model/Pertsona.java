@@ -9,6 +9,28 @@ package model;
  *
  * @author agirrezabala.peru
  */
-public class Pertsona {
+public class Pertsona implements Bezeroa {
+    private int kodea;
+    private String izena;
+    private String abizena;
+    private String emaila;
+    private String helbidea;
+
+    public int getKodea() {
+        return kodea;
+    }
+
+    public String getHelbidea() {
+        return helbidea;
+    }
+   
+   public String getIzena(){
+       return izena;
+   }
+   public String getEmaila(){
+       return emaila;
+   }
+    
+    
     
 }

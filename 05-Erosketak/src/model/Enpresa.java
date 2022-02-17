@@ -9,6 +9,29 @@ package model;
  *
  * @author agirrezabala.peru
  */
-public class Enpresa {
+public class Enpresa implements Bezeroa {
+   private int kodea;
+   private String izenJuridikoa;
+   private String izenKomertziala;
+   private String helbidea;
+   private String[] kontaktoenemailak;
+
+    public int getKodea() {
+        return kodea;
+    }
+
+    public String getHelbidea() {
+        return helbidea;
+    }
+   
+   public String getIzena(){
+       return izenJuridikoa;
+   }
+   public String getEmaila(){
+       
+       return kontaktoenemailak[0];
+   }
     
+    
+     
 }
