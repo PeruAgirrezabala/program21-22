@@ -17,9 +17,12 @@ import model.Produktua;
  * @author agirrezabala.peru
  */
 public class ObjetuBanaSortu {
+<<<<<<< HEAD
     public static void main(String[] args) {
         
    
+=======
+>>>>>>> ad318edc19db29cf2450f8a35d69cdb170dd37b4
             Bezeroa karlos = new Pertsona(1,"Karlos","Argiñano","Hondartza Pasialekua z/g ZARAUTZ","kargi@uni.eus");
         System.out.println("karlos => " + karlos);
         
@@ -41,5 +44,9 @@ public class ObjetuBanaSortu {
             System.out.println("Datu zuzenak.");
         else
             System.out.println("'guztira' atributua ez dator bat produktuen zerrendak dioenarekin.");
+<<<<<<< HEAD
     } 
+=======
+    
+>>>>>>> ad318edc19db29cf2450f8a35d69cdb170dd37b4
 }
