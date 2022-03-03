@@ -42,7 +42,7 @@ public class Puntua implements Marrazgarria {
         this.y = y;
     }
 
-    public int getSortutakoPuntuak() {
+    public static int getSortutakoPuntuak() {
         return sortutakoPuntuak;
         
     }

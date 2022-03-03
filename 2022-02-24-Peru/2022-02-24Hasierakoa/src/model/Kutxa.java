@@ -22,15 +22,28 @@ public class Kutxa extends Laukizuzena {
         return altuera;
     }
     
-    public boolean isHandiagoa(Kutxa besteKutxaBat){
-        
-    }
-    public String toString(){
-        
-    }
     @Override
-    public  void marraztu(){
-        
+    public String toString() {
+        return "Kutxa{" + "altuera=" + altuera + '}';
     }
     
+    public boolean isHandiagoa(Kutxa besteKutxaBat){
+        int bolumenaBat = ((this.getKontrakoErpina().getX() - this.getErpinBat().getX()) * (this.getKontrakoErpina().getY() - this.getErpinBat().getY()) * altuera);
+        int besteKutxarenBolumena = ((besteKutxaBat.getKontrakoErpina().getX() - besteKutxaBat.getErpinBat().getX()) * (besteKutxaBat.getKontrakoErpina().getY() - besteKutxaBat.getErpinBat().getY()) * besteKutxaBat.getAltuera());
+        if(bolumenaBat > besteKutxarenBolumena){
+            return true;
+        }
+        return false;
+    }
+    
+    @Override
+    public void marraztu(){
+        System.out.println("Oinarria: " + super.toString() + " eta altuera:" + altuera + " dituen kutxa GUI baten marraztua izan da.");
+    }
+    public int getBolumena(){
+        int bolumena =Math.abs(this.getKontrakoErpina().getX() - this.getErpinBat().getX()) * Math.abs(this.getKontrakoErpina().getY() - this.getErpinBat().getY()) * altuera;
+        return bolumena;
+    }
 }
+    
+

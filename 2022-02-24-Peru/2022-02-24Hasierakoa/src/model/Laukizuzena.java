@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author agirrezabala.peru
  */
-public abstract class Laukizuzena implements Marrazgarria {
+public  class Laukizuzena implements Marrazgarria {
     private Puntua erpinBat;
     private Puntua kontrakoErpina;
 
@@ -42,11 +42,21 @@ public abstract class Laukizuzena implements Marrazgarria {
         return lauErpinenArraya;
         
     }
-    public ArrayList<Puntua> getLauerpinenArrayLista(){
-        ArrayList<Puntua> lauerpinenArrayLista=new Puntua[4];
+    public ArrayList<Puntua> getLauErpinenArrayLista(){
+        ArrayList<Puntua> lauerpinenArrayLista =new ArrayList();
+        lauerpinenArrayLista.add(erpinBat);
+        lauerpinenArrayLista.add(new Puntua(erpinBat.getY(), kontrakoErpina.getX()));
+        lauerpinenArrayLista.add(kontrakoErpina);
+        lauerpinenArrayLista.add(new Puntua(erpinBat.getX(), kontrakoErpina.getY()));
+        return lauerpinenArrayLista;
+        
     }
+    public boolean isInside(){
+        
+    }
+    @Override
     public String toString(){
-        return"";
+        return "";
     }
     @Override
     public void marraztu() {
