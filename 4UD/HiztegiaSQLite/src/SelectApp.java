@@ -28,7 +28,7 @@ public class SelectApp {
      */
     private Connection connect() {
         // SQLite connection string
-        String url = "jdbc:sqlite:C:\\Users\\agirrezabala.peru\\Documents\\programazioa\\4UD\\HiztegiaSQLite\\db\\Hiztegia.db";
+        String url = "jdbc:sqlite:C:\\Users\\agirrezabala.peru\\Documents\\programazioa\\GIT\\program21-22\\4UD\\HiztegiaSQLite\\db\\Hiztegia.db";
         Connection conn = null;
         try {
             conn = DriverManager.getConnection(url);

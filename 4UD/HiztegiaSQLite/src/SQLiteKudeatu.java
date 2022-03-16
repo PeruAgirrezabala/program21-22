@@ -18,7 +18,7 @@ public class SQLiteKudeatu {
         Connection conn = null;
         try {
             // db parameters
-            String url = "jdbc:sqlite:C:\\Users\\agirrezabala.peru\\Documents\\programazioa\\4UD\\HiztegiaSQLite\\db\\Hiztegia.db";
+            String url = "jdbc:sqlite:C:\\Users\\agirrezabala.peru\\Documents\\programazioa\\GIT\\program21-22\\4UD\\HiztegiaSQLite\\db\\Hiztegia.db";
             // create a connection to the database
             conn = DriverManager.getConnection(url);
 
