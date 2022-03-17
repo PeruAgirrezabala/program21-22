@@ -17,7 +17,6 @@ public class ProgramaNagusia {
         Scanner teclado = new Scanner(System.in);
 
         int op1 = 0;
-        int op2 = 0;
 
         do {
 
@@ -31,26 +30,38 @@ public class ProgramaNagusia {
 
             switch (op1) {
                 case 1:
-
+                    System.out.println("Sartu ezabatu nahi dzun erregistroaren zenbakia");
+                    int x = Integer.parseInt(teclado.next());
+                    DeleteApp app = new DeleteApp();
+                    // delete the row with id 3
+                    app.delete(x);
                     break;
 
                 case 2:
+                    int a = Integer.parseInt(teclado.next());
+                    String euskaraz,
+                     gazteleraz;
+                    euskaraz = teclado.next();
+                    gazteleraz = teclado.next();
+                    InsertApp app1 = new InsertApp();
+                    // insert three new rows
+                    app1.insert(3, "aitona", "abuelo");
 
                     break;
                 case 3:
+                    SelectApp app2 = new SelectApp();
+                    app2.selectAll();
 
                     break;
                 case 4:
+                    UpdateApp app3 = new UpdateApp();
+                    // update the warehouse with id 3
+                    app3.update(3, "Ordenagailua", "Ordenador");
 
                     break;
-                case 5:
 
-                    break;
             }
 
-        }while(op1!=5);
+        } while (op1 != 5);
     }
 }
-        
-   
-     
