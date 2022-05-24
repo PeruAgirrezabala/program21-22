@@ -9,6 +9,15 @@ package model;
  *
  * @author agirrezabala.peru
  */
+<<<<<<< HEAD
+public interface Bezeroa {
+    public int getKodea();
+    public String getIzena();
+    public String getHelbidea();
+    public String getEmaila();
+    
+=======
 public class Bezeroa {
+>>>>>>> ad318edc19db29cf2450f8a35d69cdb170dd37b4
     
 }
