@@ -33,8 +33,21 @@ public class Controller implements ActionListener {
         switch (actionCommand) {
             case "TXERTATU":
                 System.out.println("TXERTATU botoia sakatu duzu");
-                Terminoa t = new Terminoa(0,view.jTextFieldEuskaraz.getText(),view.jTextFieldGazteleraz.getText());
-                model.terminoaGehitu(t);
+                Terminoa t = new Terminoa(0,(view.jTextFieldEuskaraz.getText()).toLowerCase(),(view.jTextFieldGazteleraz.getText()).toLowerCase());
+                int emaitza= model.terminoaGehitu(t);
+                switch(emaitza){
+                   case 0:
+                        view.jLabelMezua.setText("Terminoa jada datu basean");
+                   break;
+                   case 1:
+                        view.jLabelMezua.setText("Terminoa txertatuta izan da");
+                   break;
+                   default:
+                        view.jLabelMezua.setText("Datu basearekin arremanetan jartzeko arazoa");
+                        break;
+                    
+                
+        }
                 break;
             case "INPRIMATU":
                 System.out.println("INPRIMATU botoia sakatu duzu");
