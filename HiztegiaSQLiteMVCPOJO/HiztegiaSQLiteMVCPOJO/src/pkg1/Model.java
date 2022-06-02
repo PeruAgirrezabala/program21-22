@@ -1,5 +1,6 @@
 package pkg1;
 
+import java.sql.Array;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -223,12 +224,12 @@ public class Model {
     }
     public ArrayList<Terminoa> terminoakArrayListera(){
         String sql = "Select * FROM Terminoak";
-        ArrayList terminoak= new ArrayList();
+        ArrayList terminoak = new ArrayList();
         
         try ( Connection conn = konektatu();  PreparedStatement pstmt = conn.prepareStatement(sql)) {
             ResultSet rs = pstmt.executeQuery();
             while(rs.next()){
-                Terminoa t= new Terminoa(rs.getInt("id"),rs.getNString("euskaraz"),rs.getNString("gazteleraz"));
+                Terminoa t= new Terminoa(rs.getInt("id"),rs.getString("euskaraz"),rs.getString("gazteleraz"));
                 terminoak.add(t);
 
             }
@@ -237,5 +238,30 @@ public class Model {
             System.out.println("datu basearekin konektatzeko arazoak");
         }
         return terminoak;
+    }
+    public String alfabetikokiOrdenatu(){
+        String sql = "Select * From Terminoak ORDER BY euskaraz ASC";
+        try ( Connection conn = konektatu();  PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            ResultSet rs = pstmt.executeQuery();
+            char letra= 'a';
+            while(rs.next()){
+                if(rs.getString("euskaraz").charAt(0)==letra){
+                    System.out.println(rs.getString("euskaraz"));
+                }else{
+                    letra=rs.getString("euskaraz").charAt(0);
+                    System.out.println("---------");
+                    System.out.println(letra);
+                    System.out.println(rs.getString("euskaraz"));
+                }
+
+
+
+            }
+            
+        } catch (SQLException e) {
+            System.out.println("datu basearekin konektatzeko arazoak");
+        }
+        return "";
+        
     }
 }
