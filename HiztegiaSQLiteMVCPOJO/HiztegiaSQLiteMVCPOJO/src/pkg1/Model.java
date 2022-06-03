@@ -201,6 +201,7 @@ public class Model {
         }
 
     }
+    
 
     /**
      * Kontuz: lechuga');DELETE FROM Terminoak;--
@@ -239,6 +240,29 @@ public class Model {
         }
         return terminoak;
     }
+  
+    public Terminoa[] terminoakArrayra(){
+        String sql = "Select * FROM Terminoak";
+        Terminoa[] terminoak;
+        try ( Connection conn = konektatu();  PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            ResultSet rs = pstmt.executeQuery();
+            int luzeera =pstmt.getMaxRows();
+            terminoak = new Terminoa[luzeera];
+            int i=0;
+            while(rs.next()){
+
+                terminoak[i] = new Terminoa(rs.getInt("id"),rs.getString("euskaraz"),rs.getString("gazteleraz"));
+                
+            }
+            return terminoak;
+        } catch (SQLException e) {
+            System.out.println("datu basearekin konektatzeko arazoak");
+        }
+        return null;
+
+    }
+        
+    
     public String alfabetikokiOrdenatu(){
         String sql = "Select * From Terminoak ORDER BY euskaraz ASC";
         try ( Connection conn = konektatu();  PreparedStatement pstmt = conn.prepareStatement(sql)) {
@@ -263,5 +287,31 @@ public class Model {
         }
         return "";
         
+    }
+    public String euskaratu(String unaPalabra){
+        String sql = "Select euskaraz from Terminoak where gazteleraz=?";
+        String euskaratua="";
+        try ( Connection conn = konektatu();  PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, unaPalabra);
+            ResultSet rs = pstmt.executeQuery();
+            euskaratua=(rs.getString("euskaraz"));
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+           
+        }
+           return euskaratua;     
+    }
+    public String gazteleraraItzuli(String hitzBat){
+        String sql = "Select gazteleraz from Terminoak where euskaraz=?";
+        String gazteleraz="";
+        try ( Connection conn = konektatu();  PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, hitzBat);
+            ResultSet rs = pstmt.executeQuery();
+            gazteleraz=(rs.getString("gazteleraz"));
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+           
+        }
+           return gazteleraz;
     }
 }
